@@ -1,0 +1,43 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>CRUD</title>
+    </h:head>
+    <h:body>
+       <h:form>
+            <h:panelGrid columns="2">
+                Student ID Number: <h:inputText value="#{student.id}"/>
+                Student Name: <h:inputText value="#{student.name}"/>
+                Student Department: <h:inputText value="#{student.department}"/>
+                <h:commandButton value="save student" action="#{student.save}"/>
+               
+            </h:panelGrid>
+       </h:form> <br></br><br></br>
+        <h:form>
+            <h:panelGrid columns="2">
+                Student ID to Delete: <h:inputText value="#{student.id}"/>
+                <h:commandButton value="delete student" action="#{student.delete}"/>
+            </h:panelGrid>
+        </h:form><br></br><br></br>
+       
+        <h:form>
+            <h:panelGrid columns="2">
+                Student ID: <h:inputText value="#{student.id}"/>
+                <h:commandButton value="Show student" action="show.xhtml"/>
+                <h:outputText value="#{student.name}"/>
+                <h:outputText value="#{student.department}"/>
+            </h:panelGrid><br></br><br></br>
+        </h:form>
+        
+        <h:form>
+            <h:panelGrid columns="2">
+                Student ID: <h:inputText value="#{student.id}"/><br></br>
+                <h:commandButton value="Show student" action="show.xhtml"/><br></br>
+                <h:inputText value="#{student.name}"/><br></br>
+                <h:inputText value="#{student.department}"/><br></br>
+                <h:commandButton value="Update" action="#{student.update}"/>
+            </h:panelGrid>
+        </h:form>
+    </h:body>
+</html>
